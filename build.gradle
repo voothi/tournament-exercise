@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+apply plugin: 'idea'
+
+wrapper {
+    gradleVersion = '6.2.1'
+}
+
+group 'com.tournament'
+version '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-Xlint:unchecked'
+    options.compilerArgs << '-Xdiags:verbose'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    archiveClassifier.set('sources')
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    archiveClassifier.set('javadoc')
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.platform:junit-platform-engine:1.6.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.6.0'
+}
+
+test {
+    useJUnitPlatform()
+}

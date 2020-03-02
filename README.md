@@ -1,29 +1,10 @@
-# README #
+# Tournament emulation excercise
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Repository contains set of unit tests in preconfigured project necessary to get dependencies and run tests.
+But code this tests are written for does not exist.
+You have to implement tournaiment logic and necessary classes in order to make tests pass green.
+Tests code must not be changed, except imports.
+Please assume that you are writing business production ready code.
+The goal of this exercise is to check problem solving skills, so final goal is not just green tests but clean problem field solution.
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Expected time requirements are about 3h.

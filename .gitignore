@@ -1,0 +1,17 @@
+### IntelliJ IDEA ###
+!.idea
+.idea/*
+!.idea/copyright/
+
+*.iws
+*.iml
+*.ipr
+**/out/
+*.http
+
+### Gradle ###
+**/build/
+.gradle/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
