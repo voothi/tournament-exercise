@@ -1,5 +1,8 @@
 package com.tournament;
 
+import com.tournament.warrior.Highlander;
+import com.tournament.warrior.Swordsman;
+import com.tournament.warrior.Viking;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
