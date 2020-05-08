@@ -33,8 +33,7 @@ class TournamentTest {
      * a buckler is destroyed after blocking 3 blow from an axe
      */
     @Test
-    void testSwordsmanWithBucklerVsVikingWithBuckler()
-    {
+    void testSwordsmanWithBucklerVsVikingWithBuckler() {
         Swordsman swordsman = (new Swordsman()).equip("buckler");
         Viking viking = (new Viking()).equip("buckler");
 
@@ -50,12 +49,11 @@ class TournamentTest {
      * an armor : reduce all received damages by 3 & reduce delivered damages by one
      */
     @Test
-    void testArmoredSwordsmanVsViking()
-    {
+    void testArmoredSwordsmanVsViking() {
         Highlander highlander = new Highlander();
         Swordsman swordsman = (new Swordsman())
-            .equip("buckler")
-            .equip("armor");
+                .equip("buckler")
+                .equip("armor");
 
         swordsman.engage(highlander);
 
@@ -70,12 +68,11 @@ class TournamentTest {
      * once Berserk, he doubles his damages
      */
     @Test
-    void testViciousSwordsmanVsVeteranHighlander()
-    {
+    void testViciousSwordsmanVsVeteranHighlander() {
         Swordsman swordsman = (new Swordsman("Vicious"))
-            .equip("axe")
-            .equip("buckler")
-            .equip("armor");
+                .equip("axe")
+                .equip("buckler")
+                .equip("armor");
 
         Highlander highlander = new Highlander("Veteran");
 

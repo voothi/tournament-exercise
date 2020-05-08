@@ -1,25 +1,41 @@
 package com.tournament.warrior;
 
-import com.tournament.weapon.AxeWeapon;
-import com.tournament.weapon.OneHandedAxe;
+import com.tournament.weapon.*;
 
 public class Highlander implements Warrior {
 
-    private int hitPoints;
-    private AxeWeapon oneHandedAxe = new OneHandedAxe();
+    private int hitPoint;
+    private TwoHandedSword weapon;
 
     public Highlander() {
+        this.weapon = new TwoHandedSword();
     }
 
     public Highlander(String veteran) {
 
     }
 
-    public int hitPoints() {
-        return getHitPoints();
+    public void engage(Warrior warrior) {
+
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int hitPoints() {
+        return getHitPoint();
+    }
+
+    public int getHitPoint() {
+        return hitPoint;
+    }
+
+    public void setHitPoint(int hitPoint) {
+        if (hitPoint < 0) {
+            this.hitPoint = 0;
+        } else {
+            this.hitPoint = hitPoint;
+        }
+    }
+
+    public TwoHandedSword getWeapon() {
+        return weapon;
     }
 }

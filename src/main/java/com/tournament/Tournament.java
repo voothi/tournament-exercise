@@ -1,23 +1,25 @@
 package com.tournament;
 
+import com.tournament.warrior.Swordsman;
 import com.tournament.warrior.Viking;
 
 public class Tournament {
-
-    void swordsmanVsViking() {
+    public void swordsmanVsViking() {
+        Swordsman swordsman = new Swordsman();
         Viking viking = new Viking();
 
+        swordsman.engage(viking);
     }
 
-    void swordsmanWithBucklerVsVikingWithBuckler() {
-
-    }
-
-    void armoredSwordsmanVsViking() {
+    public void swordsmanWithBucklerVsVikingWithBuckler() {
 
     }
 
-    void viciousSwordsmanVsVeteranHighlander() {
+    public void armoredSwordsmanVsViking() {
+
+    }
+
+    public void viciousSwordsmanVsVeteranHighlander() {
 
     }
 
