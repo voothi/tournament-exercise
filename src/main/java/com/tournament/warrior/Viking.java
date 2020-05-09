@@ -1,6 +1,7 @@
 package com.tournament.warrior;
 
 import com.tournament.weapon.AxeWeapon;
+import com.tournament.weapon.Buckler;
 import com.tournament.weapon.OneHandedAxe;
 import com.tournament.weapon.Weapon;
 
@@ -8,6 +9,7 @@ public class Viking implements Warrior {
 
     private int hitPoint = 120;
     private OneHandedAxe weapon;
+    private Buckler personalArmour;
 
     public Viking() {
         this.weapon = new OneHandedAxe();
@@ -18,7 +20,10 @@ public class Viking implements Warrior {
     }
 
     public Viking equip(String type) {
-        return null;
+        if (type.equals("buckler")) {
+            this.personalArmour = new Buckler();
+        }
+        return this;
     }
 
     public int hitPoints() {
@@ -39,5 +44,9 @@ public class Viking implements Warrior {
 
     public OneHandedAxe getWeapon() {
         return weapon;
+    }
+
+    public Buckler getPersonalArmour() {
+        return personalArmour;
     }
 }

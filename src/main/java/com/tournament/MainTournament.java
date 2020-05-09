@@ -4,5 +4,6 @@ public class MainTournament {
     public static void main(String[] args) {
         Tournament tournament = new Tournament();
         tournament.swordsmanVsViking();
+        tournament.swordsmanWithBucklerVsVikingWithBuckler();
     }
 }
